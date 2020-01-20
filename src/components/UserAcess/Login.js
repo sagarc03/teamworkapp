@@ -1,7 +1,7 @@
 import React from 'react';
 import Application from '../API/API';
 import pick from 'lodash/pick';
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button, Jumbotron } from 'react-bootstrap';
 import { Redirect } from "react-router-dom";
 
 class LoginForm extends React.Component {
@@ -60,7 +60,7 @@ class LoginForm extends React.Component {
       return <Redirect to="/" />;
     }
     return <div className="container pt-5 col-lg-4 col-md-5 col-sm-6">
-      <div className="jumbotron">
+      <Jumbotron>
       <Form onSubmit={this.onSubmit}>
         <Form.Group controlId="username">
           <Form.Label>Username</Form.Label>
@@ -72,7 +72,7 @@ class LoginForm extends React.Component {
         </Form.Group>
         <Button variant="secondary" type="submit" block>Submit</Button>
       </Form>
-      </div>
+      </Jumbotron>
     </div>;
   }
 }
