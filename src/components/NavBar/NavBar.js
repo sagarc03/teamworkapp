@@ -20,7 +20,7 @@ class AppNavbar extends React.Component {
   }
 
   render() {
-    const logoutButton = <Nav.Link href="/logout/" active={true} style={{color: 'white'}} title="logout">
+    const logoutButton = <Nav.Link href="/logout" active={true} style={{color: 'white'}} title="logout">
       <FontAwesomeIcon icon={faKey} size="2x" />
     </Nav.Link>;
 
