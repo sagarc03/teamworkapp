@@ -1,0 +1,48 @@
+{
+  "name": "teamworkapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --mode development --progress --open --hot",
+    "build": "webpack --mode production --progress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sagarc03/teamworkapp.git"
+  },
+  "keywords": [],
+  "author": "Sagar Chavan <sagar.c.03@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sagarc03/teamworkapp/issues"
+  },
+  "homepage": "https://github.com/sagarc03/teamworkapp#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.26",
+    "@fortawesome/free-solid-svg-icons": "^5.12.0",
+    "@fortawesome/react-fontawesome": "^0.1.8",
+    "bootstrap": "^4.4.1",
+    "react": "^16.12.0",
+    "react-bootstrap": "^1.0.0-beta.16",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/polyfill": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  },
+  "peerDependencies": {
+    "jquery": "^3.4.1",
+    "popper": "^1.0.1"
+  }
+}
