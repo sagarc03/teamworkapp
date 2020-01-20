@@ -10,7 +10,6 @@ class LoginForm extends React.Component {
     this.state = {
       username: '',
       password: '',
-      isLoggedIn: localStorage.getItem('isLoggedIn') === "true" ? true : false
     }
     this.handleChange = this.handleChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
@@ -36,7 +35,6 @@ class LoginForm extends React.Component {
   onSubmit(event) {
     event.preventDefault();
     const credentials = pick(this.state, ['username', 'password']);
-    console.log(credentials);
     Application.request('token/', 'POST', credentials)
       .then(res => this.saveToken(res))
       .catch(err => console.log(err));
@@ -44,19 +42,13 @@ class LoginForm extends React.Component {
 
   saveToken(res) {
     if (res.status === 200) {
+      console.log(res)
       res.json()
-        .then(data => {
-          localStorage.setItem('jwttoken', data['access']);
-          localStorage.setItem('isLoggedIn', true);
-          this.setState(
-            {
-              isLoggedIn: true
-            });
-        });
+        .then(data => {this.props.login(data)});
     }
   }
   render() {
-    if(this.state.isLoggedIn){
+    if(this.props.isLoggedIn){
       return <Redirect to="/" />;
     }
     return <div className="container pt-5 col-lg-4 col-md-5 col-sm-6">
