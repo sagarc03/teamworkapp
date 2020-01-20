@@ -12,9 +12,9 @@ class AppNavbar extends React.Component {
   }
   componentDidMount() {
     const status = localStorage.getItem('isLoggedIn');
-    if (status !== null && status){
+    if (status !== null && status === "true"){
       this.setState({
-        isLoggedIn: status 
+        isLoggedIn: true
       })
     }
   }
