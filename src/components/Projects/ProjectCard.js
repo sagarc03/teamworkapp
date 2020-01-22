@@ -9,7 +9,7 @@ class ProjectCard extends React.Component {
     }
     return (
       <div className="pb-4 col-lg-4 col-md-6 col-sm-12">
-        <Button variant="Link" href={`project/${this.props.project.id}`}>
+        <Button variant="Link" href={`/${this.props.project.id}`}>
           <Card bg="light" border="secondary" style={{ width: '20rem' }}>
             <Card.Body>
               <Card.Title>{this.props.project.name}</Card.Title>
